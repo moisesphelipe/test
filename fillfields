@@ -3,14 +3,24 @@
 	jQuery(window).on('load',function(){
 		var comments ='<textarea name="order_comments2" class="input-text " id="order_comments" placeholder="Adicione observacoes ao pedido" rows="2" cols="5" ></textarea>';
 
-jQuery('.fl-wrap-textarea').append(comments);
+jQuery('#order_comments_field > span').prepend(comments);
 	jQuery('textarea[name="order_comments"]').css('visibility','hidden'); 	
 	
 		
 	jQuery("form[name='checkout']").change(function() {
 		var orderComments = jQuery('textarea[name="order_comments2"]').val();
-		orderComments += jQuery('dl.variation').html()
-	jQuery('textarea[name="order_comments"]').val(orderComments);
+
+	var nComments = jQuery('dt').size();
+	var orderComments2 = orderComments;
+	let i = 0;
+	while(i < nComments){
+		 orderComments2 += "<p>"+jQuery("dt:eq("+i+")").text()+jQuery("dd:eq("+i+")").text()+"</p>";
+		 i++
+		 
+	}
+
+	jQuery("#order_comments").val(orderComments2);
+	
 	
 	}); 
 	})
