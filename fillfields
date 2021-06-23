@@ -1,0 +1,17 @@
+<?php wp_enqueue_script("jquery"); ?>
+<script type="text/javascript">
+	jQuery(window).on('load',function(){
+		var comments ='<textarea name="order_comments2" class="input-text " id="order_comments" placeholder="Adicione observacoes ao pedido" rows="2" cols="5" ></textarea>';
+
+jQuery('.fl-wrap-textarea').append(comments);
+	jQuery('textarea[name="order_comments"]').css('visibility','hidden'); 	
+	
+		
+	jQuery("form[name='checkout']").change(function() {
+		var orderComments = jQuery('textarea[name="order_comments2"]').val();
+		orderComments += jQuery('dl.variation').html()
+	jQuery('textarea[name="order_comments"]').val(orderComments);
+	
+	}); 
+	})
+</script>
