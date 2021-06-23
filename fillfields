@@ -2,9 +2,28 @@
 	.woocommerce-password-strength .bad{
 		visibility: hidden;
 	}
+	.woocommerce-password-strength .short{
+		visibility: hidden;
+	}
+	.woocommerce-password-strength .good{
+		visibility: hidden;
+	}
+	.woocommerce-password-strength .strong{
+		visibility: hidden;
+	}
+
 	.bad{ visibility: hidden; }
+
+	.short{ visibility: hidden; }
+
+	.good{ visibility: hidden; }
+
+	.strong{ visibility: hidden; }
 	.woocommerce-password-hint{
 		visibility: hidden;
+	}
+	.fl-wrap-textarea{
+		height: 0px;
 	}
 </style>
 <?php wp_enqueue_script("jquery"); ?>
