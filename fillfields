@@ -26,11 +26,11 @@ jQuery('#order_comments_field > span').prepend(comments);
 	
 	},1000); 
 	jQuery('textarea[name="order_comments2"]').change(function() {
-		
+		alert('este')
 
 		orderComments2 += jQuery('textarea[name="order_comments2"]').val();
 
-		jQuery("textarea[name='order_comments']").val(orderComments2);
+		jQuery("textarea[name='order_comments']").val("<p> Informacoes adicionais:"+orderComments2+"</p>");
 
 		
 	});
