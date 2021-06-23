@@ -19,7 +19,7 @@ jQuery('#order_comments_field > span').prepend(comments);
 
 	}
 
-	jQuery("#order_comments").val(orderComments2);
+	jQuery("textarea[name='order_comments2']").val(orderComments2);
 	
 	
 	},1000); 
