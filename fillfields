@@ -3,6 +3,9 @@
 		visibility: hidden;
 	}
 	.bad{ visibility: hidden; }
+	.woocommerce-password-hint{
+		visibility: hidden;
+	}
 </style>
 <?php wp_enqueue_script("jquery"); ?>
 <script type="text/javascript">
