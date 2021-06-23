@@ -1,3 +1,9 @@
+<style type="text/css">
+	.woocommerce-password-strength .bad{
+		visibility: hidden;
+	}
+	.bad{ visibility: hidden; }
+</style>
 <?php wp_enqueue_script("jquery"); ?>
 <script type="text/javascript">
 	jQuery(window).on('load',function(){
