@@ -1,6 +1,7 @@
 <?php wp_enqueue_script("jquery"); ?>
 <script type="text/javascript">
 	jQuery(window).on('load',function(){
+		jQuery('.woocommerce-password-strength').css('visibility','hidden');
 		var comments ='<textarea name="order_comments2" class="input-text " id="order_comments" placeholder="Adicione observacoes ao pedido" rows="2" cols="5" ></textarea>';
 
 jQuery('#order_comments_field > span').prepend(comments);
@@ -19,7 +20,7 @@ jQuery('#order_comments_field > span').prepend(comments);
 
 	}
 
-	jQuery("textarea[name='order_comments2']").val(orderComments2);
+	jQuery("textarea[name='order_comments']").val(orderComments2);
 	
 	
 	},1000); 
